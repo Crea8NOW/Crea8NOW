@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto|Montserrat');
+*{
+  box-sizing: border-box;
+}
+::selection {
+    background: yellow;
+}
+body{
+  margin: 0;
+  background-color: black;
+  font-family: 'Lato', sans-serif;
+}
+header{
+  height:100vh;
+  width:100vw;
+  position: fixed;
+  display: flex;
+}
+.col1{
+  height: 100%;
+  width: 50%;
+  /*background: linear-gradient(to right, #fff, #f5b4c7);
+  background-color: #f8d4d4;*/
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col1 .back{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  opacity: 0.5;
+  background-image: url('working.jpg');
+  filter: grayscale(100%);
+  background-size: cover;
+}
+.col1 img{
+  width: 100%;
+  z-index: 2
+}
+.col2{
+  height: 100%;
+  width: 50%;
+  color: black;
+  background-color: #FDA51D;
+  display: flex;
+  /*color: #f8d4d4;*/
+}
+.col2 .text{
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+  padding: 2.5vmax;
+}
+.col2 p{
+  margin-bottom: 0.5em;
+}
+input{
+  height: 40px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  width: 73%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 20px;
+  outline: none
+}
+input:focus{
+  border-color: white
+}
+button{
+  height: 40px;
+  width: 23%;
+  float: right;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+button:hover{
+  background-color: transparent;
+  color: black;
+  border-color: white;
+  background-color: white;
+}
+
+@media only screen and (orientation: portrait) {
+  header{display: block}
+.col1{width: 100%; height: 45%;}
+  .col1 img{width: 75%}
+  .col2{width: 100%;height: 55%;text-align: center;}
+  .col2 .text{margin: 0}
+  input{width: 100%}
+  button{width: 25%; float: none; margin: 10px}
+}

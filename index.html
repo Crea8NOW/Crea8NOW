@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea8NOW is an online platform that connects African creatives and freelancers to African clients.">
+    <meta name="author" content="Crea8NOW">
+    <meta property="og:title" content="Crea8NOW">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crea8NOW">
+    <meta property="og:url" content="http://www.crea8now.com.ng">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="#FDA51D">
+    <meta name="msapplication-navbutton-color" content="#FDA51D">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon"href="logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <title>Crea8NOW: Connecting African Clients to African Creatives</title>
+  </head>
+  <body onload="carousel()">
+    <div id="test"></div>
+    <section>
+      <div class="banner">
+        <div class="logo">
+          <img src="logo.png" alt="Crea8NOW Logo">
+        </div>
+        <div class="menu">
+          <a class="active" href="index.html">Home</a>
+          <a href="#">How It Works</a>
+          <a href="services.html">Quick Services</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="index.html"><li>Home</li></a>
+            <a href="#"><li>How It Works</li></a>
+            <a href="services.html"><li>Quick Services</li></a>
+            <a href="#"><li>Contact Us</li></a>
+          </ul>
+        </div>
+        </nav>
+      </div>
+      <div class="content">
+            <div id="slider">
+                <div class="imgslide"><div class="slider-text">Website Design<br><a href="#">Build my website</a></div></div>
+                <div class="imgslide"><div class="slider-text">Logo Creation<br><a href="#">Create a Logo</a></div></div>
+                <div class="imgslide"><div class="slider-text">Illustrations<br><a href="#">Make an illustration</a></div></div>
+                <div class="imgslide"><div class="slider-text">Graphic Design<br><a href="#">Get a design</a></div></div>
+                <div class="imgslide"><div class="slider-text">Get Started<br><a href="#">Design now</a></div></div>
+                <button onclick="plusDivs(-1)">&#10094;</button>
+                <button onclick="plusDivs(1)">&#10095;</button>
+            </div>
+          </div>
+    </section>
+  </body>
+</html>

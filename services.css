@@ -1,0 +1,21 @@
+.boxes{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+.box-small{
+  width: 100%;
+  height: 100%;
+  transition: all 500ms;
+  font-size:
+}
+.box-content{
+  display: none
+}
+.box-small:nth-of-type(1){background-color: #21A097}
+.box-small:nth-of-type(2){background-color: #22BFAC}
+.box-small:nth-of-type(3){background-color: #26CDB1}
+.box-small:nth-of-type(4){background-color: #25DAAB;}
