@@ -246,7 +246,7 @@ background-color: #1D8A7B
 .imgslide:nth-of-type(5) .slider-text a:hover{
 border-color: #1D8A7B;
 }
-.content button{
+#slider button{
   background-color: transparent;
   border: none;
   outline: none;
@@ -259,10 +259,10 @@ border-color: #1D8A7B;
   margin: auto;
   height: fit-content
 }
-.content button:nth-of-type(1){
+#slider button:nth-of-type(1){
   left: 0
 }
-.content button:nth-of-type(2){
+#slider button:nth-of-type(2){
   right: 0
 }
 @media screen and (max-width:660px) {

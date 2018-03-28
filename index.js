@@ -24,3 +24,24 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+var box = document.getElementsByClassName("box-small")
+var text=document.getElementsByClassName("box-text")
+var content = document.getElementsByClassName("box-content")
+function expand(n){
+  for (i=0; i<box.length; i++) {
+    if (i==n){
+      box[n].style.width = "100%";
+      box[n].style.height = "100%";
+      text[n].style.display="none";
+      content[n].style.display="grid"
+  }
+    else{
+      box[i].style.display="none"
+    }
+}
+}
+function close(){
+      box.style.display="block";
+      box.style.width="50%";
+      box.style.height="50%"
+}
