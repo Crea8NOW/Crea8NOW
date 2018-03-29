@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
 *{
   box-sizing: border-box;
+  font-family: 'Lato',sans-serif;
 }
 body{
   margin: 0;
@@ -123,6 +125,9 @@ nav{
 #menu li{
   padding: 10px 0;
   font-size: 22px;
+}
+#menu .active{
+  text-decoration: underline;
 }
 #menuToggle input:checked ~ ul{
   transform: none;
@@ -285,4 +290,208 @@ border-color: #1D8A7B;
     right: 0;
     top: auto;
   }
+}
+/*How It Works Page*/
+.content h1{
+  width: 100%;
+  padding-top: 25px;
+  top: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white
+}
+.hiw{
+  display: grid;
+  height: 90%;
+  padding: 5%;
+  align-items: center;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 3%;
+}
+.hiw h2{
+  color: #FDA51D
+}
+/* Services Page*/
+.boxes{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box-small{
+  width: 50%;
+  height: 50%;
+  transition: all 500ms;
+  position: absolute;
+  cursor: pointer;
+}
+.box-small:hover{
+  box-shadow: 0px 0px 30px 3px black;
+  z-index: 2
+}
+.box-content .close{
+  position: absolute;
+  font-size: 1em;
+  color: black;
+  top: 0;
+  right: 0;
+  padding: 0.5% 1%;
+  cursor: pointer;
+  z-index: 5
+}
+.box-content .close:hover{
+  color: white;
+  background-color: #56b6a8;
+}
+.box-text{
+  font-size: 1.5em;
+  color: white;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.box-content{
+  display: none;
+  height: 100%;
+  grid-template-columns: 47.5% 47.5%;
+  grid-template-rows: 100%;
+  grid-column-gap: 5%;
+  padding: 5%;
+  color: white;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+.box-small:nth-of-type(1){background-color: #21A097;top:0}
+.box-small:nth-of-type(2){background-color: #22BFAC;top:0;right:0}
+.box-small:nth-of-type(3){background-color: #26CDB1;bottom: 0}
+.box-small:nth-of-type(4){background-color: #25DAAB;bottom: 0;right: 0}
+.build{
+  height: inherit;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+.build a{
+  color: white;
+  text-decoration: none;
+  border: 1.5px solid white;
+  background: #FDA51D;
+  border-radius: 50px;
+  padding: 12.5px
+}
+.build a:hover{
+  border: 2px solid #FDA51D;
+  box-shadow: 0px 0px 10px 1px white
+}
+.portfolio{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  padding: 2%;
+  color: #56b6a8;
+  background-color: white;
+}
+/*Contact Page*/
+form{
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+}
+/*input{
+  border: 1px solid transparent;
+  border-bottom-color: white;
+  background: transparent;
+  outline: none;
+  padding: 2%;
+  width: 42.5%;
+  margin-left: 5%;
+  font-size: 1.5em;
+  color: white;
+}
+textarea{
+  border: 1px solid transparent;
+  border-bottom-color: white;
+  background: transparent;
+  padding: 2%;
+  height: 40%;
+  width: 91%;
+  margin-left: 5%;
+  font-size: 1.5em;
+  color: white;
+  outline: none;
+}*/
+.col1{
+  height: 100%;
+  width: 50%;
+  background-color: inherit;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.col1 .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #56B6A8;
+  opacity: 0.3;
+  background-size: cover;
+}
+.col1 iframe{
+  width: 75%;
+  height: 50%;
+  border-radius: 50px;
+}
+.col1 .text{
+  color: black;
+  font-size: 2em;
+}
+.col1 img{
+  height: 100%;
+  z-index: 2
+}
+.col2{
+  height: 100%;
+  width: 50%;
+  color: black;
+  background-color: #56B6A8;
+  display: flex;
+  position: relative;
+}
+.col2 .text{
+  width: 100%
+}
+.col2 p{
+  margin-bottom: 0.5em;
+}
+input{
+  height: 40px;
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  width: 73%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 20px;
+  outline: none
+}
+input:focus{
+  border-color: white
+}
+button:hover{
+  background-color: transparent;
+  color: black;
+  border-color: white;
+  background-color: white;
 }
