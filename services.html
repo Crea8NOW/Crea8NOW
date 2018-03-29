@@ -17,7 +17,26 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="services.css">
     <link rel="shortcut icon"href="logo.png">
-    <script src="index.js"></script>
+    <script>
+    var box = document.getElementsByClassName("box-small")
+    var text=document.getElementsByClassName("box-text")
+    var content = document.getElementsByClassName("box-content")
+    var close = document.getElementsByClassName("close")
+    function expand(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "100%";
+          box[n].style.height = "100%";
+          box[n].style.cursor = "default"
+          text[n].style.display="none";
+          content[n].style.display="grid"
+        }
+        else{
+          box[i].style.display="none"
+        }
+      }
+    }
+</script>
     <title>Crea8NOW | Services</title>
   </head>
   </head>
@@ -55,9 +74,7 @@
             Website Design
           </div>
           <div class="box-content">
-            <div class="close" onclick="close()">
-              &times
-            </div>
+            <div class="close" onclick="close(0)">&times</div>
             <div class="build">
               Build Your Website Now
             </div>
@@ -71,7 +88,7 @@
             Illustrations
           </div>
           <div class="box-content">
-
+              <div class="close" onclick="close(1)">&times</div>
           </div>
         </div>
         <div class="box-small" onclick="expand(2)">
@@ -79,7 +96,7 @@
             Flyers & Banners
           </div>
           <div class="box-content">
-
+            <div class="close" onclick="close(2)">&times</div>
           </div>
         </div>
         <div class="box-small" onclick="expand(3)">
@@ -87,7 +104,7 @@
             Graphic Design
           </div>
           <div class="box-content">
-
+              <div class="close" onclick="close(3)">&times</div>
           </div>
         </div>
       </div>
