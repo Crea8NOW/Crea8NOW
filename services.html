@@ -36,6 +36,20 @@
         }
       }
     }
+    function close(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "50%";
+          box[n].style.height = "50%";
+          box[n].style.cursor = "pointer"
+          text[n].style.display="block";
+          content[n].style.display="none"
+        }
+        else{
+          box[i].style.display="block"
+        }
+      }
+    }
 </script>
     <title>Crea8NOW | Services</title>
   </head>
@@ -76,7 +90,8 @@
           <div class="box-content">
             <div class="close" onclick="close(0)">&times</div>
             <div class="build">
-              Build Your Website Now
+              Get your very own website in just 48 hours for only &#8358;65,000.<p>
+              <a href="#">Build My Website</a>
             </div>
             <div class="portfolio">
               Websites We've Built
