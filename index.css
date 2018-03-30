@@ -169,6 +169,7 @@ nav{
   position: absolute;
   margin: auto;
   text-align: center;
+  background-color: inherit;
 }
 .slider-text a{
   color: inherit;
