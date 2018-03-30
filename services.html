@@ -116,20 +116,39 @@
   var text=document.getElementsByClassName("box-text")
   var content = document.getElementsByClassName("box-content")
   var close = document.getElementsByClassName("close")
-
-  function expand(n){
-    for (i=0; i<box.length; i++) {
-      if (i==n){
-        box[n].style.width = "100%";
-        box[n].style.height = "100%";
-        box[n].style.cursor = "default"
-        text[n].style.display="none";
-        content[n].style.display="grid"
+  var mq = window.matchMedia( "(max-width: 700px)" );
+  if (mq.matches){
+    function expand(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "100%";
+          box[n].style.height = "100%";
+          box[n].style.cursor = "default"
+          box[n].style.top="0"
+          text[n].style.display="none";
+          content[n].style.display="grid"
+        }
+        else{
+          box[i].style.display="none"
+        }
       }
-      else{
-        box[i].style.display="none"
+    };
+  }
+  else{
+    function expand(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "100%";
+          box[n].style.height = "100%";
+          box[n].style.cursor = "default"
+          text[n].style.display="none";
+          content[n].style.display="grid"
+        }
+        else{
+          box[i].style.display="none"
+        }
       }
-    }
-  };
+    };
+  }
 </script>
 </html>
