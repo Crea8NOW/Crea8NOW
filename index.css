@@ -338,10 +338,10 @@ border-color: #1D8A7B;
   position: absolute;
   cursor: pointer;
 }
-.box-small:hover{
+/*.box-small:hover{
   box-shadow: 0px 0px 30px 3px black;
   z-index: 2
-}
+}*/
 .box-content .close{
   position: absolute;
   font-size: 1em;
