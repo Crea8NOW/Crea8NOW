@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+*{
+  box-sizing: border-box;
+  font-family: 'Lato',sans-serif;
+}
+::selection{
+  background-color: #FDA51D;
+  color: white
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+  background-color: black
+}
+.banner{
+  height: 12vh;
+  padding: 1vh;
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-rows:100%;
+  grid-template-columns: 65% 35%;
+}
+.banner .logo{
+  height: 100%;
+  z-index: 2
+}
+.banner .logo img{
+  height: 100%
+}
+.banner .menu{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2
+}
+.banner .menu a{
+  text-decoration: none;
+  color: #56b6a8;
+  font-family: sans-serif;
+}
+.banner .menu .active{
+  color: #FDA51D;
+}
+.banner .menu a:hover{
+  opacity: 0.5
+}
+nav{
+  display: none
+}
+#menuToggle{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  right: 0;
+  margin-right: 5%;
+  top: 4.75vh;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #007068;
+}
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu{
+  position: absolute;
+  visibility: hidden;
+  width: 90vw;
+  padding: 5vw;
+  right: 0;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0,-120%);
+  transition: all 0.7s ease-out;
+}
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menu .active{
+  color: #FDA51D
+}
+#menuToggle input:checked ~ ul{
+  transform: none;
+  visibility: visible;
+}
+#menu a{
+  text-decoration: none;
+  color: #56b6a8;
+  font-family: sans-serif;
+}
+#menu a:focus{
+  color: #1D8A7B
+}
+.content{
+  height: 88vh;
+  width: 100%;
+  background-color: black
+}
+.blackground{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background-color: black;
+  opacity: 0.6;
+}
+#slider{
+  width: 100%;
+  height: 100%;
+}
+.slidein-text{
+  position: absolute;
+  margin: auto;
+  top: 12vh;
+  left: 0;
+  right: 0;
+  animation: slidein 5s ease-in-out infinite;
+}
+@keyframes slidein {
+  0%{transform: translateX(-100%);}
+  25%{transform: translateX(0%);}
+  27%{transform: translateX(2%);}
+  30%{transform: translateX(0%);}
+  75%{transform: translateX(0%);}
+  100%{transform: translateX(100%);}
+}
+.imgslide{
+  position: absolute;
+  width: 100%;
+  height: 88vh;
+}
+.slider-text{
+  height: fit-content;
+  width: fit-content;
+  padding: 1.5em;
+  font-family: sans-serif;
+  color:white;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  right: 0;
+  top:0;
+  bottom: 0;
+  left: 0;
+}
+.caption{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0
+}
+.caption h4:nth-of-type(1){
+  font-size: 1.2em;
+  color: #fef;
+  text-transform: uppercase;
+  margin-bottom: 0.1em
+}
+.caption h4:nth-of-type(2){
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 0
+}
+.imgslide a{
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  border: 2px solid white;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  bottom: 20vh;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.imgslide a span{
+  z-index: 2
+}
+.imgslide a:after{
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0;
+  background-color: #FDA51D;
+  transition: all 350ms;
+  position: absolute;
+  float: right;
+  margin: -0.5em 0.5em;
+  z-index: 1
+}
+.imgslide:nth-of-type(1) a::after{
+  content: "Build a website";
+}
+.imgslide:nth-of-type(2) a::after{
+  content: "Create a Logo";
+}
+.imgslide:nth-of-type(3) a::after{
+  content: "Make an illustration";
+}
+.imgslide:nth-of-type(4) a::after{
+  content: "Get a design";
+}
+.imgslide:nth-of-type(5) a::after{
+  content: "Design now";
+}
+.imgslide a:hover::after{
+  left: 0;
+  margin: -0.5em 0;
+}
+blockquote {
+border:none;
+quotes: "\201C""\201D""\2018""\2019";
+font-size: 2em;
+text-align: center;
+margin-bottom: 1em
+}
+blockquote:before {
+    content: open-quote;
+    font-size: 3em;
+    float: left;
+    line-height: 0.5;
+    font-family:  Georgia, "Times New Roman", Times, serif;
+}
+blockquote:after {
+    content: close-quote;
+    font-size:3em;
+    float: right;
+    line-height: -0.5;
+    font-family:  Georgia, "Times New Roman", Times, serif;
+}
+.imgslide{
+  background-size: cover;
+  background-position: bottom;
+}
+.imgslide:nth-of-type(1){
+  background-color: #21A097;
+  background-image: url("https://images.fastcompany.net/image/upload/w_937,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/fc/3050675-poster-p-1-designers-should-design-coders-should-code.jpg");
+}
+.imgslide:nth-of-type(2){
+  background-color: #22BFAC;
+  background-image: url("https://content.buysellads.com/wp-content/uploads/2017/09/Designer-at-Desk.jpg");
+}
+.imgslide:nth-of-type(3){
+  background-color: #26CDB1;
+  background-image: url("http://i0.wp.com/blog.eti.ng/wp-content/uploads/2017/05/software-developer.jpeg?resize=1068%2C527");
+  background-size: cover;
+}
+.imgslide:nth-of-type(4){
+  background-color: #25DAAB;
+  background-image: url("https://www.cloudera.com/content/dam/www/static/images/lifestyle/lg/xguys-developers-thinking-in-dark-room.jpg.pagespeed.ic.KwV2sJQwSh.webp");
+}
+.imgslide:nth-of-type(5){
+  background-color: #56B6A8;
+  background-image: url("http://www.interlandtech.com/images/developer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*How It Works Page*/
+.content h1{
+  width: 100%;
+  padding-top: 25px;
+  top: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white
+}
+.hiw{
+  display: grid;
+  padding: 10vh 2%;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 0.5%;
+}
+.hiw h1{
+  position: absolute;
+  top: 15vh
+}
+.hiw h2{
+  color: #FDA51D;
+}
+.hiw .img{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.hiw img{
+  width: 50%
+}
+.step1,.step2,.step3{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.animate-reveal {
+  opacity: 0;
+  animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-120%);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-first {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animate-second {
+  -webkit-animation-delay: 3s;
+     -moz-animation-delay: 3s;
+       -o-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.animate-third {
+  -webkit-animation-delay: 5s;
+     -moz-animation-delay: 5s;
+       -o-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.content video{
+  position: fixed;
+  top: 12vh;
+  min-height: calc(100% - 12vh);
+  min-width: 100%;
+  opacity: 0.5
+}
+/* Services Page*/
+.boxes{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box-small{
+  width: 50%;
+  height: 50%;
+  transition: all 500ms;
+  position: absolute;
+  cursor: pointer;
+  background-color: black;
+  overflow: hidden;
+}
+.box-content .close{
+  position: absolute;
+  font-size: 1em;
+  color: black;
+  top: 0;
+  right: 0;
+  padding: 0.5% 1%;
+  cursor: pointer;
+  z-index: 5
+}
+.box-content .close:hover{
+  color: white;
+  background-color: #56b6a8;
+}
+.box-text{
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  background-color: inherit;
+  overflow: hidden;
+}
+.box-text::after{
+  content: "";
+  text-align: center;
+  color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 0;
+  background-color: #FDA51D;
+  transition: all 350ms;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  float: right;
+}
+.box-text:hover::after{
+  height: 100%;
+  content: "Click for more";
+}
+.box-content{
+  display: none;
+  background-color: black;
+  height: 100%;
+  grid-template-columns: 47.5% 47.5%;
+  grid-template-rows: 100%;
+  grid-column-gap: 5%;
+  padding: 5%;
+  color: white;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+.box-content a{
+  color: inherit;
+  text-decoration: none;
+}
+.box-small:nth-of-type(1){top:0}
+.box-small:nth-of-type(2){background-color: white; color:black;top:0;right:0}
+.box-small:nth-of-type(2) .box-text{color: black;}
+.box-small:nth-of-type(3){background-color: white; color: black;bottom: 0}
+.box-small:nth-of-type(3) .box-text{color: black;}
+.box-small:nth-of-type(4){bottom: 0;right: 0}
+.build{
+  height: inherit;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+.build a{
+  color: white;
+  text-decoration: none;
+  border: 1.5px solid white;
+  background: #FDA51D;
+  border-radius: 50px;
+  padding: 12.5px
+}
+.build a:hover{
+  border: 2px solid #FDA51D;
+  box-shadow: 0px 0px 10px 1px white
+}
+.portfolio{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  padding: 2%;
+  color: #56b6a8;
+  background-color: white;
+}
+/*Contact Page*/
+.contact{
+  display: flex;
+  height: 90%
+  }
+.col1{
+  height: 100%;
+  width: 50%;
+  background-color: inherit;
+  position: relative;
+  display: grid;
+  grid-template-rows: 47.5% 47.5%;
+  grid-row-gap: 5%;
+  grid-template-columns: 100%;
+  padding: 5%;
+}
+.col1 iframe{
+  width: 100%;
+  height: 100%;
+}
+.col1 .text{
+  color: white;
+  font-size: 2vmax;
+}
+.col1 p{
+  margin: 0.5em 0
+}
+.col2{
+  height: 100%;
+  width: 50%;
+  display: grid;
+  position: relative;
+  align-items: center;
+  padding: 5%
+}
+.col2 .text{
+  width: 100%
+}
+form{
+  width: 100%;
+  height: 100%
+}
+input{
+  padding: 2%;
+  width: 100%;
+  margin-bottom: 2%
+}
+textarea{
+  width: 100%;
+  height: 50%;
+  padding: 2%
+}
+.col2 button{
+  padding: 2%;
+  background-color: white;
+  color: black;
+  border-width: 1px
+}
+.col2 button:hover{
+  background-color: #FDA51D;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width:700px) {
+  .menu{
+    display: none!important
+  }
+  nav{
+    display: block
+  }
+  .imgslide a{
+    bottom: 15vh
+  }
+  .imgslide:nth-of-type(2) a, .imgslide:nth-of-type(3) a,.imgslide:nth-of-type(4) a{
+    bottom: 1vh
+  }
+  .slider-text{
+    right: 0;
+    top:0;
+    bottom: 0;
+    left: 0
+  }
+  .hiw{
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+    grid-template-rows: 33% 33% 33%;
+  }
+  .step1,.step2,.step3{padding:5%}
+  .box-small{
+    width: 100%;
+    height: 25%;
+  }
+  .box-small:nth-of-type(1){background-color: white}
+  .box-small:nth-of-type(1) .box-text{color: black}
+  .box-small:nth-of-type(2){top:25%;background-color: black}
+  .box-small:nth-of-type(2) .box-text{color: white;}
+  .box-small:nth-of-type(3){background-color: white;top: 50%}
+  .box-small:nth-of-type(3) .box-text{color: black;}
+  .box-small:nth-of-type(4){background-color: black;top: 75%}
+  .box-small:nth-of-type(4) .box-text{color: white;}
+  .box-content{grid-template-rows: 30% 70%;grid-template-columns: 100%}
+  .box-text .blackground{display: none}
+  .portfolio{bottom: 0;width: 100%;height: 65%;text-align: center;}
+  .contact{display: block}
+  .col1{height: 50%;width: 100%;grid-template-columns: 47.5% 47.5%; grid-column-gap: 5%;grid-template-rows: 100%}
+  .col2{height: 50%;width: 100%}
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea8NOW is an online platform that connects African creatives and freelancers to African clients.">
+    <meta name="author" content="Crea8NOW">
+    <meta property="og:title" content="Crea8NOW">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crea8NOW">
+    <meta property="og:url" content="http://www.crea8now.com.ng">
+    <meta property="og:image" content="/static/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="black">
+    <meta name="msapplication-navbutton-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="shortcut icon"href="/static/logo.png">
+    <script>
+    var slideIndex = 0;
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("imgslide");
+        var y = document.getElementsByClassName("slider-text");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+           y[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        y[slideIndex-1].style.display="block"
+        setTimeout(carousel, 5000);
+    }
+    </script>
+    <title>Crea8NOW: Connecting African Clients to African Creatives</title>
+  </head>
+  <body onload="carousel()">
+      <div class="banner">
+        <div class="logo">
+          <img src="/static/logo.png" alt="Crea8NOW Logo">
+        </div>
+        <div class="menu">
+          <a class="active" href="/">Home</a>
+          <a href="/hiw">How It Works</a>
+          <a href="/services">Quick Services</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+        <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="/"><li class="active">Home</li></a>
+            <a href="/hiw"><li>How It Works</li></a>
+            <a href="/services"><li>Quick Services</li></a>
+            <a href="/contact"><li>Contact Us</li></a>
+          </ul>
+        </div>
+        </nav>
+      </div>
+      <div class="content">
+            <div id="slider">
+                <div class="imgslide">
+                    <div class="blackground">
+                    </div>
+                    <div class="slider-text">
+                    <blockquote>Thanks so much for your super fast delivery.</blockquote>
+                    <p>
+                    <div class="caption">
+                      <h4>Harry Potter</h4>
+                      <h4>Saviour of the Wizarding World</h4>
+                    </div>
+                    </div>
+                    <a href="/services">Build a website</a>
+                  </div>
+                <div class="imgslide">
+                    <div class="blackground">
+                    </div>
+                  <div class="slider-text">
+                    <blockquote>You guys made it so easy!<br><span style="color:#FDA51D">Crea8NOW</span> is everything they say they are and much more.</blockquote>
+                    <p>
+                    <div class="caption">
+                      <h4>Captain Jack Sparrow</h4>
+                      <h4>Scourge Of The Seven Seas</h4>
+                    </div>
+                    </div>
+                    <a href="/services">Create a Logo</a>
+                  </div>
+                  <div class="imgslide">
+                      <div class="blackground">
+                      </div>
+                    <div class="slider-text">
+                      <blockquote>It actually exceeded my expectations. <br>Thanks for doing a great job.</blockquote>
+                      <p>
+                      <div class="caption">
+                        <h4>Megamind</h4>
+                        <h4>Evil 'genius'</h4>
+                      </div>
+                      </div>
+                      <a href="/services">Make an illustration</a>
+                    </div>
+                  <div class="imgslide">
+                      <div class="blackground">
+                      </div>
+                    <div class="slider-text">
+                      <blockquote>Wow, I'm blown away.<br>I can't believe they got everything done in under 48 hours; you guys are awesome!</blockquote>
+                      <p>
+                      <div class="caption">
+                        <h4>Harley Quinn</h4>
+                        <h4>Femme Fatale</h4>
+                      </div>
+                      </div>
+                      <a href="/services">Get a design</a>
+                    </div>
+                <div class="imgslide">
+                    <div class="blackground">
+                    </div>
+                    <div class="slidein-text">
+                      <h1><span style="color:#FDA51D; z-index:2">Crea8NOW</span>:<br>The best creative solution for your brand</h1>
+                    </div>
+                    <div class="slider-text">
+                      <span style="font-size:2em">Don't just take out word for it.</span><br><span style="font-size:1.2em">See what our past clients have to say.</span>
+                    </div>
+                    <a href="/services">Design now</a>
+                  </div>
+            </div>
+          </div>
+  </body>
+</html>

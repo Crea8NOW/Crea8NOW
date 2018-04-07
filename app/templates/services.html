@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea8NOW is an online platform that connects African creatives and freelancers to African clients.">
+    <meta name="author" content="Crea8NOW">
+    <meta property="og:title" content="Crea8NOW">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crea8NOW">
+    <meta property="og:url" content="http://www.crea8now.com.ng">
+    <meta property="og:image" content="/static/logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="black">
+    <meta name="msapplication-navbutton-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="shortcut icon"href="/static/logo.png">
+    <title>Crea8NOW | Services</title>
+  </head>
+  <body>
+    <section>
+    <div class="banner">
+      <div class="logo">
+        <img src="/static/logo.png" alt="Crea8NOW Logo">
+      </div>
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="/hiw">How It Works</a>
+        <a class="active" href="/services">Quick Services</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+      <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="/"><li>Home</li></a>
+          <a href="/hiw"><li>How It Works</li></a>
+          <a href="/services"><li class="active">Quick Services</li></a>
+          <a href="/contact"><li>Contact Us</li></a>
+        </ul>
+      </div>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="boxes">
+        <div class="box-small" onclick="expand(0)">
+          <div class="box-text">
+            Website Design
+          </div>
+          <div class="box-content">
+            <a href="/services" class="close" >&times</a>
+            <div class="build">
+              Get your very own website in just 48 hours for only &#8358;65,000.<p>
+              <a href="#">Build My Website</a>
+            </div>
+            <div class="portfolio">
+              Websites We've Built
+            </div>
+          </div>
+        </div>
+        <div class="box-small" onclick="expand(1)">
+          <div class="box-text">
+            Illustrations
+          </div>
+          <div class="box-content">
+            <a href="/services" class="close" >&times</a>
+            <div class="build">
+              Create perfect illustrations for only &#8358;6,000.<p>
+              <a href="#">Create An Illustration</a>
+            </div>
+            <div class="portfolio">
+              Illustrations
+            </div>
+          </div>
+        </div>
+        <div class="box-small" onclick="expand(2)">
+          <div class="box-text">
+            Flyers & Banners
+          </div>
+          <div class="box-content">
+            <a href="/services" class="close" >&times</a>
+            <div class="build">
+              Get your flyers and banners for only &#8358;6,000.<p>
+              <a href="#">Flyers & Banners</a>
+            </div>
+            <div class="portfolio">
+              Flyers and Banners
+            </div>
+          </div>
+        </div>
+        <div class="box-small" onclick="expand(3)">
+          <div class="box-text">
+            Graphic Design
+          </div>
+          <div class="box-content">
+            <a href="/services" class="close" >&times</a>
+            <div class="build">
+              Start a Graphic Design for only &#8358;6,000.<p>
+              <a href="#">Graphic Design</a>
+            </div>
+            <div class="portfolio">
+              Graphic Designs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+  <script>
+  var box = document.getElementsByClassName("box-small")
+  var text=document.getElementsByClassName("box-text")
+  var content = document.getElementsByClassName("box-content")
+  var close = document.getElementsByClassName("close")
+  var mq = window.matchMedia( "(max-width: 700px)" );
+  if (mq.matches){
+    function expand(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "100%";
+          box[n].style.height = "100%";
+          box[n].style.cursor = "default"
+          box[n].style.top="0"
+          text[n].style.display="none";
+          content[n].style.display="grid"
+        }
+        else{
+          box[i].style.display="none"
+        }
+      }
+    };
+  }
+  else{
+    function expand(n){
+      for (i=0; i<box.length; i++) {
+        if (i==n){
+          box[n].style.width = "100%";
+          box[n].style.height = "100%";
+          box[n].style.cursor = "default"
+          text[n].style.display="none";
+          content[n].style.display="grid"
+        }
+        else{
+          box[i].style.display="none"
+        }
+      }
+    };
+  }
+</script>
+</html>
